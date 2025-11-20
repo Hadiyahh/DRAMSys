@@ -1,0 +1,7 @@
+id,memspec,mcconfig,addressmapping
+9,HBM2.json,fifo.json,am_hbm2_8Gb_pc_brc.json
+40,HBM2.json,fifoStrict.json,am_hbm2_8Gb_pc_brc.json
+71,HBM2.json,fr_fcfs.json,am_hbm2_8Gb_pc_brc.json
+102,HBM2.json,fr_fcfs_grp.json,am_hbm2_8Gb_pc_brc.json
+133,HBM2.json,fr_fcfs_noref.json,am_hbm2_8Gb_pc_brc.json
+164,HBM2.json,fr_fcfs_refp2b.json,am_hbm2_8Gb_pc_brc.json

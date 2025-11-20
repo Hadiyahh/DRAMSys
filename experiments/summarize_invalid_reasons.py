@@ -11,6 +11,7 @@ from pathlib import Path
 """
 
 csv_path = Path("invalid_experiment_matrix_with_reason.csv")
+output_path = Path("invalid_reasons_summary.txt")
 
 counts = Counter()
 
@@ -24,10 +25,27 @@ with csv_path.open("r", newline="") as f:
 
 total = sum(counts.values())
 
-try:
-    for reason, n in counts.most_common():
-        print(f"{n:5d}  {reason}")
-    print("-" * 60)
-    print(f"Total invalid configs counted: {total}")
-except BrokenPipeError:
-    sys.exit(0)
+# try:
+#     for reason, n in counts.most_common():
+#         print(f"{n:5d}  {reason}")
+#     print("-" * 60)
+#     print(f"Total invalid configs counted: {total}")
+# except BrokenPipeError:
+#     sys.exit(0)
+# ---- Build summary text ----
+lines = []
+for reason, n in counts.most_common():
+    lines.append(f"{n:5d}  {reason}")
+lines.append("-" * 60)
+lines.append(f"Total invalid configs counted: {total}")
+
+summary_text = "\n".join(lines)
+
+# ---- Print to terminal ----
+print(summary_text)
+
+# ---- Auto-write to file ----
+with output_path.open("w") as f:
+    f.write(summary_text)
+
+print(f"\nSaved summary → {output_path}")

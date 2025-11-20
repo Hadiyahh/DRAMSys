@@ -6,15 +6,22 @@ Generate unfiltered experiment matrix with all possible DRAM configurations
 import os
 import csv
 import itertools
+from pathlib import Path
 
-# Paths to configuration directories
-CONFIG_BASE = "configs"
-MEMSPEC_DIR = os.path.join(CONFIG_BASE, "memspec")
-MCCONFIG_DIR = os.path.join(CONFIG_BASE, "mcconfig")
-ADDRESSMAPPING_DIR = os.path.join(CONFIG_BASE, "addressmapping")
+DRAMSYS_ROOT = Path(__file__).resolve().parents[2]
+CONFIG_BASE = DRAMSYS_ROOT / "configs"
+
+# MEMSPEC_DIR = os.path.join(CONFIG_BASE, "memspec")
+# MCCONFIG_DIR = os.path.join(CONFIG_BASE, "mcconfig")
+# ADDRESSMAPPING_DIR = os.path.join(CONFIG_BASE, "addressmapping")
+
+MEMSPEC_DIR = DRAMSYS_ROOT / "configs" / "memspec"
+MCCONFIG_DIR = DRAMSYS_ROOT / "configs" / "mcconfig"
+ADDRESSMAPPING_DIR = CONFIG_BASE / "addressmapping"
 
 # Output file
-OUTPUT_FILE = "experiments/unfiltered_experiment_matrix.csv"
+#OUTPUT_FILE = "experiments/unfiltered_experiment_matrix.csv"
+OUTPUT_FILE  = DRAMSYS_ROOT / "experiments" / "unfiltered_experiment_matrix.csv"
 
 def get_config_files(directory):
     """Get all JSON config files from a directory"""
@@ -31,7 +38,7 @@ def generate_unfiltered_matrix():
     memspecs = get_config_files(MEMSPEC_DIR)
     mcconfigs = get_config_files(MCCONFIG_DIR)
     addressmappings = get_config_files(ADDRESSMAPPING_DIR)
-    
+
     print(f"Found {len(memspecs)} memspecs, {len(mcconfigs)} mcconfigs, {len(addressmappings)} address mappings")
     
     # Generate all combinations

@@ -22,7 +22,9 @@ from collections import defaultdict
 # Paths
 # ------------------------------------------------------
 
-EXPERIMENTS_DIR = Path("/Users/m.akhtari/JLR/DRAMSys/experiments")
+EXPERIMENTS_DIR = Path(__file__).resolve().parents[1]
+DRAMSYS_ROOT = EXPERIMENTS_DIR.parent
+
 INPUT_CSV = EXPERIMENTS_DIR / "valid_experiment_matrix.csv"
 OUTPUT_DIR = EXPERIMENTS_DIR / "tier_matrices_csvs"
 

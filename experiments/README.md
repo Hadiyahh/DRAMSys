@@ -109,7 +109,7 @@ valid_experiment_matrix2.csv
 2. **Invalid configurations + reason(s)**
 
 ```
-invalid_experiment_matrix_with_reason2.csv
+invalid_experiment_matrix_with_reason.csv
 ```
 
 The second file contains rows like:
@@ -149,7 +149,7 @@ This helps understand:
 python3 summarize_invalid_reasons.py
 ```
 
-### **Output (saved manually)**
+### **Output (saved automatically)**
 
 ```bash
 python3 summarize_invalid_reasons.py > invalid_reasons_summary.txt
@@ -200,7 +200,7 @@ Groups valid configurations into *tiers* based on DRAM memory type:
 ### **Run**
 
 ```bash
-python3 scripts/split_valid_matrix_by_family.py
+python3 scripts/split_matrix_by_family.py
 ```
 
 ### **Outputs (one CSV per DRAM family)**
