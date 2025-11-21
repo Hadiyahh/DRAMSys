@@ -1,0 +1,16 @@
+{
+    "simulation": {
+        "simulationid": "tier_wideio_id2099_ai_cpu_trace",
+        "simconfig": "../simconfig/example.json",
+        "memspec": "../memspec/JEDEC_256Mb_WIDEIO-200_128bit.json",
+        "addressmapping": "../addressmapping/am_wideio_4x256Mb_brc.json",
+        "mcconfig": "../mcconfig/fr_fcfs_noref.json",
+        "tracesetup": [
+            {
+                "type": "player",
+                "clkMhz": 1000,
+                "name": "/home/arifh/DRAMSys/experiments/traces/ai_cpu_trace.stl"
+            }
+        ]
+    }
+}

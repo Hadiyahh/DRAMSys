@@ -1,0 +1,16 @@
+{
+    "simulation": {
+        "simulationid": "tier_hbm2_id164_ai_cpu_trace",
+        "simconfig": "../simconfig/example.json",
+        "memspec": "../memspec/HBM2.json",
+        "addressmapping": "../addressmapping/am_hbm2_8Gb_pc_brc.json",
+        "mcconfig": "../mcconfig/fr_fcfs_refp2b.json",
+        "tracesetup": [
+            {
+                "type": "player",
+                "clkMhz": 1000,
+                "name": "/home/arifh/DRAMSys/experiments/traces/ai_cpu_trace.stl"
+            }
+        ]
+    }
+}

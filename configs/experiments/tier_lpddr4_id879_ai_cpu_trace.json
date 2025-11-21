@@ -1,0 +1,16 @@
+{
+    "simulation": {
+        "simulationid": "tier_lpddr4_id879_ai_cpu_trace",
+        "simconfig": "../simconfig/example.json",
+        "memspec": "../memspec/JEDEC_1Gbx16_LPDDR4-2133.json",
+        "addressmapping": "../addressmapping/am_lpddr4_1Gbx16_robaco.json",
+        "mcconfig": "../mcconfig/fifo.json",
+        "tracesetup": [
+            {
+                "type": "player",
+                "clkMhz": 1000,
+                "name": "/home/arifh/DRAMSys/experiments/traces/ai_cpu_trace.stl"
+            }
+        ]
+    }
+}

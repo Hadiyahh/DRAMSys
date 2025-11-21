@@ -1,0 +1,16 @@
+{
+    "simulation": {
+        "simulationid": "tier_mram_id14215_ai_cpu_trace",
+        "simconfig": "../simconfig/example.json",
+        "memspec": "../memspec/STT-MRAM-2.0x.json",
+        "addressmapping": "../addressmapping/am_stt-mram_8x2Gbx8_dimm_p1KB_rbc.json",
+        "mcconfig": "../mcconfig/fr_fcfs_grp.json",
+        "tracesetup": [
+            {
+                "type": "player",
+                "clkMhz": 1000,
+                "name": "/home/arifh/DRAMSys/experiments/traces/ai_cpu_trace.stl"
+            }
+        ]
+    }
+}

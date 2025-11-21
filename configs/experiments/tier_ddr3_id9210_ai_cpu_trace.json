@@ -1,0 +1,16 @@
+{
+    "simulation": {
+        "simulationid": "tier_ddr3_id9210_ai_cpu_trace",
+        "simconfig": "../simconfig/example.json",
+        "memspec": "../memspec/MICRON_2GB_DDR3-1333_64bit_D_SODIMM.json",
+        "addressmapping": "../addressmapping/am_ddr3_8x1Gbx8_dimm_p1KB_rbc.json",
+        "mcconfig": "../mcconfig/fr_fcfs_grp.json",
+        "tracesetup": [
+            {
+                "type": "player",
+                "clkMhz": 1000,
+                "name": "/home/arifh/DRAMSys/experiments/traces/ai_cpu_trace.stl"
+            }
+        ]
+    }
+}
